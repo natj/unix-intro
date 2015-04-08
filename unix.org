@@ -1,5 +1,13 @@
 * Introduction to UNIX
 
+Lecture material can be obtained from the https://github.com/natj/unix-intro
+OR by typing into command line:
+
+git clone https://github.com/natj/unix-intro.git
+
+
+
+
 ** Directory structure
 + root /
 + home ~
