@@ -108,6 +108,7 @@ command
 *** SSH
 + ssh user@host
   + ssh user@linux.utu.fi
+  + PuttY
 + scp user@host:~/path/to/file file_name
 
 *** Compression
@@ -131,7 +132,7 @@ command
 + ping host
   
 *** TODO Exercises
-1. Compress the data dir into data.tar.gz
+1. Compress the "data" dir into "data.tar.gz"
 2. Remove the "data" dir
 3. List the contents of the data.tar.gz (HINT: Don't forget 
    the -f option at the end so that tar reads your file)
@@ -157,7 +158,7 @@ command
   + ctrl+n/p (next/previous)
   + ctrl+f/b (forward/back)
   + ctrl+XXX+g (abort)
-
+    
 *** nano
 + No specialities
 + ctrl+x (to quit)
@@ -172,7 +173,7 @@ command
 2. Do the same using the nano
 3. Finally open the file using vi and exit
    + EXTRA: add text using vi also (HINT: google vi tutorial for basic usage)
-
+     
 
 ** Scripting
 Where is our bash-script interpreter located
@@ -201,7 +202,7 @@ Now we must make it executable (for safety reasons)
    + Welcomes the current user and 
    + displays the current date
 2. Run the script, is it working? What is the output?
-3. Extend the previous script to work as a basic backup script:
+3. EXTRA: Extend the previous script to work as a basic backup script:
    + Make it so that when run, it compresses the previously made "data" dir
      into a file called backup_XXX.tar.gz where
    + XXX is the current date (HINT: use TIME=`date +%Y_%m_%d` to 
