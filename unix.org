@@ -64,16 +64,16 @@ all of the files in the current dir (so also the hidden .-files)
 *** TODO Exercises
 1. Create an empty file called "foo.txt"
 2. Copy the file "foo.txt" into "foo.txt.copy"
-3. Rename the file "foo.txt.copy" to "foo2"
+3. Rename the file "foo.txt.copy" to "foo2.txt"
 4. Create an empty directory called "data"
-5. Move the file "foo2" into "data" directory
+5. Move the file "foo2.txt" into "data" directory
 
 6. Create a new subdirectory inside "data" called "new"
-7. Copy the file "foo2" in the "data" directory into "new" directory;
-   Rename it at the same time to "foo3"
-8. Move the file "foo3" in the "new" directory back to home directory;
-   At the same time, change the name into "foo.old"
-9. Delete the file "foo.old"
+7. Copy the file "foo2.txt" in the "data" directory into "new" directory;
+   Rename it at the same time to "foo3.txt"
+8. Move the file "foo3.txt" in the "new" directory back to home directory;
+   At the same time, change the name into "foo_old.txt"
+9. Delete the file "foo_old.txt"
 10. Remove the "new" subdirectory inside the "data" directory
 
 11. Check the file permissions (with ls -l) for the "foo.txt"
@@ -145,7 +145,7 @@ command
    + use w to list users
    + use grep to filter for specific words (don't forget piping)
    + check grep manual for counting the hits
-
+     
 
 ** Editors
 *** Emacs
