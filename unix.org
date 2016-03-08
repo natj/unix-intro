@@ -1,7 +1,10 @@
 * Introduction to UNIX
 
-Lecture material can be obtained from the https://github.com/natj/unix-intro
-OR by typing into command line:
+Lecture material can be obtained from the web https://github.com/natj/unix-intro
+
+OR 
+
+by typing into command line (if you have git installed):
 
 git clone https://github.com/natj/unix-intro.git
 
@@ -33,14 +36,12 @@ git clone https://github.com/natj/unix-intro.git
   + Q (in man pages)
 
 *** TODO Exercises
-1. Run the following commands step by step and check with pwd (and ls) where 
-you are
+1. Run the following commands step by step and check with pwd (and ls) where you are
    + cd /
    + cd ~
    + cd /
    + cd 
-2. Check using the man command what is the option (-XXX) for ls to display 
-all of the files in the current dir (so also the hidden .-files)
+2. Check using the man command what is the option (-XXX) for ls to display all of the files in the current dir (so we can also see the hidden dot-files)
 
 
 *** File management
@@ -60,7 +61,7 @@ all of the files in the current dir (so also the hidden .-files)
 + df (disk usage)
 + du (dir usage)
   + -h (human readable)
-
+    
 *** TODO Exercises
 1. Create an empty file called "foo.txt"
 2. Copy the file "foo.txt" into "foo.txt.copy"
@@ -69,10 +70,8 @@ all of the files in the current dir (so also the hidden .-files)
 5. Move the file "foo2.txt" into "data" directory
 
 6. Create a new subdirectory inside "data" called "new"
-7. Copy the file "foo2.txt" in the "data" directory into "new" directory;
-   Rename it at the same time to "foo3.txt"
-8. Move the file "foo3.txt" in the "new" directory back to home directory;
-   At the same time, change the name into "foo_old.txt"
+7. Copy the file "foo2.txt" in the "data" directory into "new" directory; rename it at the same time to "foo3.txt"
+8. Move the file "foo3.txt" in the "new" directory back to home directory; at the same time, change the name into "foo_old.txt"
 9. Delete the file "foo_old.txt"
 10. Remove the "new" subdirectory inside the "data" directory
 
@@ -89,8 +88,7 @@ all of the files in the current dir (so also the hidden .-files)
 + kill (pid)
 
 *** TODO Exercises
-1. Check what is the heaviest process somebody (who?) is running using the top
-command
+1. Check what is the heaviest process somebody (who?) is running using the top command
 2. What is the PID number of this process?
 
 
@@ -134,12 +132,11 @@ command
 *** TODO Exercises
 1. Compress the "data" dir into "data.tar.gz"
 2. Remove the "data" dir
-3. List the contents of the data.tar.gz (HINT: Don't forget 
-   the -f option at the end so that tar reads your file)
+3. List the contents of the data.tar.gz (HINT: Don't forget the -f option at the end so that tar reads your file)
 4. Uncompress the data.tar.gz
-5. List the content of the data.tar.gz with the additional verbose command BUT
-   redirect the output to go into a file "data_content.txt"
+5. List the content of the data.tar.gz with the additional verbose command BUT redirect the output to go into a file "data_content.txt"
 
+BONUS:
 6. SSH to linux.utu.fi with your username (if not already inside)
 7. Check how many users there are online using irssi
    + use w to list users
@@ -148,7 +145,13 @@ command
      
 
 ** Editors
+
+*** nano
++ No specialities - simple, easy and often too basic
++ ctrl+x (to quit)
+
 *** Emacs
++ Good basic workhorse with relatively easy interface
 + ctrl+x+s (save)
 + ctrl+x+c (exit)
 + More commands:
@@ -157,22 +160,19 @@ command
   + ctrl+s (search)
   + ctrl+n/p (next/previous)
   + ctrl+f/b (forward/back)
-  + ctrl+XXX+g (abort)
-    
-*** nano
-+ No specialities
-+ ctrl+x (to quit)
-  
+  + ctrl+XXX+g (abort)    
+
 *** vi/vim
++ More advanced editor with some tricks and quirks that one should know about
 + Good to know how to exit:
   +  :+wq
 
 *** TODO Exercises
 
-1. Edit the file foo.txt to include "Hello from Emacs!"; remember to save
-2. Do the same using the nano
-3. Finally open the file using vi and exit
-   + EXTRA: add text using vi also (HINT: google vi tutorial for basic usage)
+1. Edit the file foo.txt to include "Hello from NANO!"
+2. Do the same using the Emacs
+3. Finally open the file using vi and try to exit
+   + BONUS: add text using vi also (HINT: google vi tutorial for basic usage)
      
 
 ** Scripting
@@ -202,9 +202,7 @@ Now we must make it executable (for safety reasons)
    + Welcomes the current user and 
    + displays the current date
 2. Run the script, is it working? What is the output?
-3. EXTRA: Extend the previous script to work as a basic backup script:
-   + Make it so that when run, it compresses the previously made "data" dir
-     into a file called backup_XXX.tar.gz where
-   + XXX is the current date (HINT: use TIME=`date +%Y_%m_%d` to 
-     get the date in a format where underscores are used)
+3. BONUS: Extend the previous script to work as a basic backup script:
+   + Make it so that when run, it compresses the previously made "data" dir into a file called backup_XXX.tar.gz where
+   + XXX is the current date (HINT: use TIME=`date +%Y_%m_%d` to get the date in a format where underscores are used)
      
