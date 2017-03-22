@@ -10,3 +10,9 @@ For a researcher it is an invaluable tool as everything can be automated simplif
 UNIX systems incorporate a modular design that is sometimes called the "Unix philosophy", meaning that the operating system provides a set of simple tools that each perform a limited, well-defined function.
 In addition, with the unified filesystem as the main mean of communication and a shell scripting to aid you, the system can perform complex workflows with ease.
 
+
+
+------
+Totals to about 4 hour lecture, exercise & demo session.
+Use `make` to create the pdf slides with the help of `elsmd-slides.latex` from https://github.com/agoldst/elsmd . Filesystem image credits goes to http://www.jonobacon.com/
+
