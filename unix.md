@@ -3,12 +3,12 @@
 % Spring 2017
 
 
-#Notes & exercises
+# Notes & exercises
 Lecture material and exercises are available from:
 
 \alert{https://github.com/natj/unix-intro}
 
-#Unix & Linux
+# Unix & Linux
 
 UNIX is an \alert{operating system} developed already in the 1960s, most notably by Finnish \alert{Linus Torvalds}. By operating system we mean a suite of programs that make the computer work. UNIX systems are characterized by being stable, multi-user and multi-tasking systems. 
 
@@ -17,7 +17,7 @@ Because of this, UNIX can be found everywhere from supercomputers to Apple lapto
 
 UNIX systems incorporate a modular design that is sometimes called the \alert{"Unix philosophy"}, meaning that the operating system provides a set of simple tools that each perform a limited, well-defined function. In addition, with the unified filesystem as the main mean of communication and a shell scripting to aid you, the system can perform complex workflows with ease.
 
-#Directory structure
+# Directory structure
 
 - root /
 - home ~
@@ -28,7 +28,7 @@ UNIX systems incorporate a modular design that is sometimes called the \alert{"U
 \includegraphics[width=9cm]{filesys.png}
 
 
-#Shell
+# Shell
 Linus Torvalds thinks mouse should not be used to operate computers. \alert{Keep the hands on the keyboard!}
 
 \alert{Shell} is a program that provides the traditional \alert{text-only user interface} for Linux (and other Unix systems)
@@ -41,7 +41,7 @@ command -options [input]
 
 
 
-#Navigation
+# Navigation
 - `cd` - \alert{c}hange \alert{d}irectory
 - `ls` - list dir content
 - `cat` - print file
@@ -66,7 +66,7 @@ command -options [input]
 2. Check using the man command what is the option (-XXX) for ls to display all of the files in the current dir (so we can also see the hidden dot-files)
 
 
-#File management
+# File management
 - `touch` - create an empty file   
     - \alert{touch foo.txt}
 - `mkdir` - make directory 
@@ -85,7 +85,7 @@ command -options [input]
     - -h - human readable sizes
 
 
-#File permissions & ownership
+# File permissions & ownership
 
 - `ls -la foo.txt`
     - l - list format
@@ -102,7 +102,7 @@ command -options [input]
 `--w------- 1 userid groupid 0 Jan 29 11:05 foo.txt`
 
     
-#TODO Exercises
+# TODO Exercises
 1. Create an empty file called "foo.txt"
 2. Copy the file "foo.txt" into "foo.txt.copy"
 3. Rename the file "foo.txt.copy" to "foo2.txt"
@@ -120,7 +120,7 @@ command -options [input]
 15. What is the current disk space quota?
 
 
-#Process management
+# Process management
 
 ## Demo:
 
@@ -128,20 +128,20 @@ command -options [input]
     - pid : command id
 - `kill` \alert{pid}
 
-#TODO Exercises
+# TODO Exercises
 1. Check what is the heaviest process somebody (who?) is running using the top command
 2. What is the PID number of this process?
 
 
-#Searching
+# Searching
 - `grep` - search patterns/words
     - `grep mysearchword mysearchlocation`
 - `find` - search filesystem
     - `find myfindlocation -name filename`
 
   
-#More advanced stuff
-##I/O and chaining
+# More advanced stuff
+## I/O and chaining
 - `|` piping, output of first command is fed to the second
     - `cat file.txt | grep word`
 - `>` insert, output is directed to where the arrow points
@@ -150,7 +150,7 @@ command -options [input]
 
 ------
 
-##SSH
+## SSH
 - `ssh user@host`
     - `ssh user@linux.utu.fi`
     - PuttY
@@ -158,7 +158,7 @@ command -options [input]
 
 -------
 
-##Compression
+## Compression
 - `tar -caf file.tar.gz files`
     - c - create
     - a - automatic format detection (.gz)
@@ -166,7 +166,7 @@ command -options [input]
 - `tar -xf file.tar.gz`  
     - x - decompress
 
-#Misc
+# Misc
 - `echo`
 - `date`
 - `cal` (calendar)
@@ -178,14 +178,14 @@ command -options [input]
 - `cat /proc/meminfo`
 - `ping host`
   
-#TODO Exercises
+# TODO Exercises
 1. Compress the "data" dir into "data.tar.gz"
 2. Remove the "data" dir
 3. List the contents of the data.tar.gz (HINT: Don't forget the -f option at the end so that tar reads your file)
 4. Uncompress the data.tar.gz
 5. List the content of the data.tar.gz with the additional verbose command BUT redirect the output to go into a file "data_content.txt"
 
-##BONUS:
+## BONUS:
 6. SSH to linux.utu.fi with your username (if not already inside)
 7. Check how many users there are online using irssi
     - use w to list users
@@ -193,15 +193,15 @@ command -options [input]
     - check grep manual for counting the hits
      
 
-#Editors
+# Editors
 
-##Nano
+## Nano
 - No specialities - simple, easy and often too basic
 - ctrl+x (to quit)
 
 -----
 
-##Emacs
+## Emacs
 - Good basic workhorse with relatively easy interface
 - ctrl+x+s (save)
 - ctrl+x+c (exit)
@@ -215,12 +215,12 @@ command -options [input]
 
 -------
 
-##vi/vim
+## vi/vim
 - More advanced editor with some tricks and quirks that one should know about before using
 - Good to know how to exit:
   -  :q!
 
-#TODO Exercises
+# TODO Exercises
 
 1. Edit the file foo.txt to include "Hello from NANO!"
 2. Do the same using the Emacs
@@ -228,7 +228,7 @@ command -options [input]
    - BONUS: add text using vi also (HINT: google vi tutorial for basic usage)
      
 
-#Scripting
+# Scripting
 
 Script is a text file that is like a Linux spell
 - contains commands that are executed
@@ -241,7 +241,7 @@ Where is our bash-script interpreter located
 So now we know how to start bash interpreter
 - start your .sh file with #!\alert{location}
 
-#Basic script
+# Basic script
 
 ```
 #!/bin/bash
@@ -254,13 +254,13 @@ Notice that there are no spaces around "=".
 
 Backticks are used when calling commands (not ' or ")
 
-#Usage
+# Usage
 Now we must make it executable (for safety reasons)
 
 - chmod +x xxx.sh
 - ./xxx.sh
 
-#TODO Exercises 
+# TODO Exercises 
 1. Write a script myscript.sh that:
    - Welcomes the current user and 
    - displays the current date
